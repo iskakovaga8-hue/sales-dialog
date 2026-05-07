@@ -3,87 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Диалог, который приводит к оплате | Школа экспертов</title>
-  <meta name="description" content="Пошаговый план продаж в переписке — готовые фразы и сценарии для всех этапов диалога с клиентом">
+  <title>Диалог, который приводит к оплате — пошаговый план продаж в переписке</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.6; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
-    .header { text-align: center; margin-bottom: 48px; }
-    .header .badge { display: inline-block; background: #e8efff; color: #5884f5; padding: 6px 16px; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 16px; }
-    h1 { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; }
-    .subtitle { font-size: 18px; color: #666; max-width: 600px; margin: 0 auto; }
-    .card { background: white; border-radius: 24px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); margin-bottom: 32px; }
-    h2 { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
-    h2 .num { width: 36px; height: 36px; background: #5884f5; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-    p { color: #444; margin-bottom: 12px; }
-    ul { list-style: none; padding: 0; }
-    ul li { padding: 8px 0 8px 28px; position: relative; color: #444; }
-    ul li::before { content: "✓"; position: absolute; left: 0; color: #5884f5; font-weight: 700; }
-    .slides { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
-    .slide { border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-    .slide img { width: 100%; height: auto; display: block; }
-    .slide-caption { padding: 16px 20px; background: #f8f9fa; font-size: 14px; color: #666; text-align: center; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; background: #5884f5; color: white; text-decoration: none; padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 16px; transition: all 0.2s; }
-    .btn:hover { background: #3a6bd4; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(88,132,245,0.3); }
-    .text-center { text-align: center; }
-    .mt-4 { margin-top: 24px; }
-    @media (max-width: 768px) {
-      h1 { font-size: 28px; }
-      .container { padding: 24px 16px; }
-      .card { padding: 24px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Manrope', sans-serif; background: #f5f6f8; color: #1d1d1f; line-height: 1.6; }
+
+    .top-bar { background: #1a1a2e; color: #fff; padding: 14px 24px; display: flex; align-items: center; gap: 12px; font-size: 14px; }
+    .top-bar a { color: #8ab4f8; text-decoration: none; }
+    .top-bar a:hover { text-decoration: underline; }
+    .top-bar .arrow { font-size: 18px; color: #888; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 24px 20px 60px; }
+    .lesson-header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+    .lesson-header .back { color: #666; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 4px; }
+    .lesson-header .back:hover { color: #5884f5; }
+    h1 { font-size: 26px; font-weight: 700; line-height: 1.3; margin-bottom: 8px; }
+    .progress-info { font-size: 13px; color: #888; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+    .progress-bar { flex: 1; height: 6px; background: #e8e8ed; border-radius: 3px; overflow: hidden; max-width: 200px; }
+    .progress-fill { height: 100%; width: 100%; background: #5884f5; border-radius: 3px; }
+
+    /* Video placeholder */
+    .video-placeholder { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 16px; overflow: hidden; margin-bottom: 24px; position: relative; display: flex; align-items: center; justify-content: center; }
+    .video-placeholder img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+    .play-btn { position: absolute; width: 72px; height: 72px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: #1a1a2e; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .play-btn::after { content: "▶"; margin-left: 4px; }
+    .video-label { position: absolute; bottom: 16px; left: 20px; color: #fff; font-size: 14px; opacity: 0.8; }
+
+    /* Section */
+    .section { background: #fff; border-radius: 20px; padding: 28px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .section-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #1a1a2e; }
+    .section p { color: #444; margin-bottom: 12px; font-size: 15px; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul { list-style: none; padding: 0; }
+    .section ul li { padding: 6px 0 6px 24px; position: relative; color: #444; font-size: 15px; }
+    .section ul li::before { content: "•"; position: absolute; left: 8px; color: #5884f5; font-weight: 700; }
+
+    .example-block { background: #f6f8fc; border-radius: 12px; padding: 20px; margin: 12px 0; font-style: italic; color: #555; font-size: 14px; border-left: 3px solid #5884f5; }
+
+    .highlight { background: #fff8e7; border-radius: 12px; padding: 16px 20px; margin: 12px 0; border-left: 3px solid #f5a623; font-size: 14px; color: #555; }
+    .highlight strong { color: #1a1a2e; }
+
+    /* Gallery */
+    .gallery { display: flex; flex-direction: column; gap: 16px; margin: 16px 0; }
+    .gallery-item { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .gallery-item img { width: 100%; height: auto; display: block; }
+    .gallery-caption { padding: 12px 16px; background: #f8f9fa; font-size: 14px; color: #666; text-align: center; font-weight: 500; }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 50px; font-weight: 600; font-size: 15px; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
+    .btn-primary { background: #5884f5; color: #fff; }
+    .btn-primary:hover { background: #3a6bd4; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(88,132,245,0.3); }
+    .btn-outline { background: transparent; color: #5884f5; border: 2px solid #5884f5; }
+    .btn-outline:hover { background: #e8efff; }
+    .btn-small { padding: 10px 20px; font-size: 13px; }
+    .btn-google { background: #f8f9fa; color: #333; border: 1px solid #ddd; }
+    .btn-google:hover { background: #eee; }
+    .btn-telegram { background: #0088cc; color: #fff; }
+    .btn-telegram:hover { background: #0077b5; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,136,204,0.3); }
+
+    .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+    .buttons-center { justify-content: center; }
+
+    /* Additional materials grid */
+    .materials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+    .material-card { background: #f8f9fa; border-radius: 14px; padding: 16px; border: 1px solid #eee; transition: all 0.2s; }
+    .material-card:hover { border-color: #5884f5; box-shadow: 0 4px 12px rgba(88,132,245,0.1); }
+    .material-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: #1a1a2e; }
+    .material-card p { font-size: 12px; color: #888; margin-bottom: 10px; }
+    .material-card .btn { width: 100%; justify-content: center; }
+
+    /* Niche row */
+    .niches { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .niche-tag { display: inline-block; padding: 8px 14px; background: #f0f2f5; border-radius: 50px; font-size: 13px; color: #555; text-decoration: none; transition: all 0.2s; }
+    .niche-tag:hover { background: #e8efff; color: #5884f5; }
+
+    .divider { height: 1px; background: #e8e8ed; margin: 20px 0; }
+
+    .footer-note { text-align: center; color: #999; font-size: 13px; margin-top: 40px; }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 22px; }
+      .section { padding: 20px 16px; }
+      .materials-grid { grid-template-columns: 1fr; }
+      .btn { width: 100%; justify-content: center; }
     }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
-    .grid-2 .slide { margin: 0; }
-    @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="badge">Школа экспертов Prodamus</div>
-      <h1>Диалог, который приводит к оплате</h1>
-      <p class="subtitle">Пошаговый план продаж в переписке — от первого сообщения до успешной сделки</p>
+
+<div class="top-bar">
+  <a href="https://prodamusexpert.xl.ru">← Назад к курсам</a>
+  <span style="flex:1"></span>
+  <span>Школа экспертов Prodamus</span>
+</div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="lesson-header">
+    <a href="https://prodamusexpert.xl.ru" class="back">← Курсы</a>
+  </div>
+  <h1>Диалог, который приводит к оплате:<br>пошаговый план продаж в переписке</h1>
+  <div class="progress-info">
+    <span>Шаг 6 из 6</span>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <span>100%</span>
+  </div>
+
+  <!-- Video placeholder -->
+  <div class="video-placeholder">
+    <img src="assets/img_5.png" alt="Превью видео" onerror="this.style.display='none'">
+    <div class="play-btn"></div>
+    <div class="video-label">Видеоурок • 28 мин</div>
+  </div>
+
+  <!-- Section 1: Why clients go silent -->
+  <div class="section">
+    <div class="section-title">Почему клиенты молчат</div>
+    <p>Каждый эксперт сталкивался со сценарием, когда клиент задаёт вопросы, а потом замолкает. Что в такие моменты происходит на самом деле и как реагировать?</p>
+    <ul>
+      <li>Отвлёкся и забыл ответить</li>
+      <li>Ушёл «переваривать» информацию</li>
+      <li>Начал сомневаться и не знает, как об этом написать</li>
+    </ul>
+  </div>
+
+  <!-- Section 2: When and how to write -->
+  <div class="section">
+    <div class="section-title">Когда и как писать, если клиент замолчал</div>
+
+    <p><strong>Правило времени:</strong> ждём не больше 1–2 дней. Потом — напоминаем. Точка замалчивания: готовьте минимум 5 заготовок на каждую ситуацию.</p>
+
+    <div class="highlight">
+      <strong>Техника «мягкого касания»:</strong> возвращение без давления<br>
+      Добавляем эмоцию. Эмоциональный отклик — сильнейший триггер.
     </div>
 
-    <div class="card">
-      <h2><span class="num">1</span> О чём этот курс</h2>
-      <p>Пошаговая система продаж в переписке, которая помогает экспертам и предпринимателям уверенно вести диалог с клиентом и доводить его до оплаты.</p>
-      <p>Вы узнаете, как реагировать на возражения, какие формулы писем работают лучше всего и как выстроить систему дополнительных продаж.</p>
+    <p>Примеры:</p>
+    <div class="example-block">
+      «Я перечитала нашу переписку… и немного загрустила 🙂»<br><br>
+      «Если сейчас не до этого — напишите, чтобы я вас не тревожила. Если интерес ещё есть — я с радостью отвечу на любые вопросы»
     </div>
 
-    <div class="card">
-      <h2><span class="num">2</span> Чему вы научитесь</h2>
-      <ul>
-        <li>Структуре идеального продающего диалога</li>
-        <li>Обработке возражений без конфликтов</li>
-        <li>Техникам допродаж и апсейла</li>
-        <li>Готовым скриптам для всех этапов переписки</li>
-        <li>Работе с Telegram-ботом-тренажёром продаж</li>
-      </ul>
+    <p><strong>Визуал — ваш союзник.</strong> Гифки, стикеры, мемы — всё, что вызывает улыбку, работает отлично. Ваша задача — оживить переписку и вернуть контакт, не скатываясь в пассивную агрессию.</p>
+
+    <div class="highlight">
+      <strong>Техника «пан или пропал» — последняя попытка</strong><br>
+      Используем, если молчание затянулось на неделю и более.
     </div>
 
-    <div class="card">
-      <h2><span class="num">3</span> Материалы курса</h2>
-      <div class="slides">
-        <div class="slide">
-          <img src="assets/img_0.jpeg" alt="Слайд 1" loading="lazy">
-        </div>
-        <div class="slide">
-          <img src="assets/img_1.jpeg" alt="Слайд 2" loading="lazy">
-        </div>
-        <div class="slide">
-          <img src="assets/img_2.jpeg" alt="Слайд 3" loading="lazy">
-        </div>
+    <div class="example-block">
+      «Кажется, мы немного потерялись. Если вы передумали — это абсолютно нормально, дайте знать. Если всё ещё интересно — напишите, и я подберу для вас лучшее решение»
+    </div>
+
+    <p><strong>Важно:</strong> не обвинять, не драматизировать, не взывать к совести. Только честность и спокойствие.</p>
+  </div>
+
+  <!-- Section 3: Stages -->
+  <div class="section">
+    <div class="section-title">Этапы продаж в переписке</div>
+    <p>Наглядные материалы по ключевым этапам ведения диалога с клиентом:</p>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="assets/img_0.jpeg" alt="Этап: презентация" loading="lazy">
+        <div class="gallery-caption">3. Этап: презентация</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img_1.jpeg" alt="Этап: отработка возражений" loading="lazy">
+        <div class="gallery-caption">4. Этап: отработка возражений</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img_2.jpeg" alt="Этап: дополнительные продажи" loading="lazy">
+        <div class="gallery-caption">5. Этап: дополнительные продажи</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: Summary -->
+  <div class="section">
+    <div class="section-title">Итог</div>
+    <ul>
+      <li>Молчание — не провал, а этап.</li>
+      <li>Не бойтесь напомнить — это не навязчивость, это забота.</li>
+      <li>Используйте эмоции, визуал и нестандартные формулировки.</li>
+      <li>Готовьте заготовки — чтобы не придумывать на ходу.</li>
+    </ul>
+  </div>
+
+  <!-- Section 5: Assignment -->
+  <div class="section">
+    <div class="section-title">Задание</div>
+    <p>Мы подготовили чат с ботом, который готов выступить в роли вашего потенциального клиента. Переходите и отрабатывайте ваши навыки продаж в переписке. Используйте шаблоны сообщений, которые вы подготовили в домашних заданиях к этому курсу.</p>
+    <div class="buttons">
+      <a href="https://t.me/prodamus_sales_helper_bot" target="_blank" class="btn btn-telegram">
+        Запустить бот-тренажёр
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 6: Additional materials -->
+  <div class="section">
+    <div class="section-title">Дополнительные материалы</div>
+    <p>Готовые фразы для всех этапов продаж, адаптированные под разные ниши:</p>
+
+    <div class="materials-grid">
+      <div class="material-card">
+        <h4>📋 Памятка «8 правил продаж в переписке»</h4>
+        <p>Базовые принципы эффективной коммуникации</p>
+        <a href="https://docs.google.com/presentation/d/1tRJ0v4HjoBnHezMHRbqJnbCAnvxPKFXqrp9__0Fvxbw/edit?usp=sharing" target="_blank" class="btn btn-google btn-small">Открыть →</a>
+      </div>
+      <div class="material-card">
+        <h4>💬 Памятка «10 готовых сообщений»</h4>
+        <p>Чтобы напомнить о себе без навязчивости</p>
+        <a href="https://docs.google.com/presentation/d/1D7FWtps3NymXrvj5G12HzebvMSLRaOjfsgqGMWlqnN8/edit?usp=sharing" target="_blank" class="btn btn-google btn-small">Открыть →</a>
       </div>
     </div>
 
-    <div class="text-center mt-4">
-      <a href="https://prodamusexpert.xl.ru" class="btn" target="_blank">
-        Перейти в Школу экспертов →
-      </a>
+    <div class="divider"></div>
+    <p style="font-weight:600;margin-bottom:10px;font-size:14px;">Адаптированные фразы по нишам:</p>
+    <div class="niches">
+      <a href="https://docs.google.com/presentation/d/1s6bQH55aIiyOuu6Fc2PebqOJR5wjSLpyYsMqDQ3BbYk/edit?usp=sharing" target="_blank" class="niche-tag">👔 Карьерный коуч</a>
+      <a href="https://docs.google.com/presentation/d/1hyrSTJPALbrqriFqi5unptyM1C2-KKpmZAZ2w15pHOQ/edit?usp=sharing" target="_blank" class="niche-tag">🗣 Логопед</a>
+      <a href="https://docs.google.com/presentation/d/1xVsa1k1gZdLTC3Qaiz3CQk-vaVz5YCLx5AkoaauIMqc/edit?usp=sharing" target="_blank" class="niche-tag">🧠 Нейрограф</a>
+      <a href="https://docs.google.com/presentation/d/1W-xtbljbJXY6pix6wkAryqfFtwEIYXZL8Q397hjFrTw/edit?usp=sharing" target="_blank" class="niche-tag">🥗 Нутрициолог</a>
+      <a href="https://docs.google.com/presentation/d/1quAl0qycWmnN9jEUmS1i-Vnwf_UMrA8vxc3WMXAGJsA/edit?usp=sharing" target="_blank" class="niche-tag">📚 Репетитор</a>
+      <a href="https://docs.google.com/presentation/d/1GSew7KBiZcAQntFoYhWARTllGOm8Ibe3a5h7OWOwM8k/edit?usp=sharing" target="_blank" class="niche-tag">👩‍🏫 Педагог</a>
+      <a href="https://docs.google.com/presentation/d/1k4ptTHDtQW4J_Ey7red37dF_VBuNOGjc5NuezwRNtXc/edit?usp=sharing" target="_blank" class="niche-tag">🛋 Психотерапевт</a>
+      <a href="https://docs.google.com/presentation/d/15Jd5A4pMh5balrSWa5jIcRnLQdws6zFzhttnvgNA_H4/edit?usp=sharing" target="_blank" class="niche-tag">💰 Финансовый консультант</a>
+      <a href="https://docs.google.com/presentation/d/1Ex-JIpKnbgLg6N7mjhYjp0ZtICLXM4vglGAEQ3dSJiQ/edit?usp=sharing" target="_blank" class="niche-tag">⚖️ Юрист</a>
     </div>
-    <p class="text-center" style="margin-top: 20px; color: #999; font-size: 13px;">© 2026. Материал для портфолио.</p>
   </div>
+
+  <div class="footer-note">© 2026 Школа экспертов Prodamus · Материал для портфолио</div>
+</div>
+
 </body>
 </html>
